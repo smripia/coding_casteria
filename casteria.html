@@ -41,16 +41,16 @@
         <div class="swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <img src="../img/restaurant.jpg" alt="restaurant">
+                    <img src="img/restaurant.jpg" alt="restaurant">
                 </div>
                 <div class="swiper-slide">
-                    <img src="../img/interior.jpg" alt="interior">
+                    <img src="img/interior.jpg" alt="interior">
                 </div>
                 <div class="swiper-slide">
-                    <img src="../img/samon.jpg" alt="samon">
+                    <img src="img/samon.jpg" alt="samon">
                 </div>
                 <div class="swiper-slide">
-                    <img src="../img/pasta.jpg" alt="pasta">
+                    <img src="img/pasta.jpg" alt="pasta">
                 </div>
             </div>
             <div class="swiper-pagination"></div>
@@ -102,7 +102,7 @@
        <section class="info hidden">
         <div class="image-container">
             <h2>Signature Food</h2>
-            <img src="../img/samon.jpg" alt="Salmon Dish" class="img-fluid">
+            <img src="img/samon.jpg" alt="Salmon Dish" class="img-fluid">
         </div>
         <p>サーモンは刺身やカルパッチョで食べるのが美味しいですが、リッチな気分になれるサーモンステーキがおすすめです。サーモンの美味しさを引き立てる2種類のソースも魅力です！</p>
       </section>
@@ -110,7 +110,7 @@
       <section class="info hidden">
         <div class="image-container">
             <h2>Our Coffee</h2>
-            <img src="../img/barista.jpg" alt="barista" class="img-fluid">
+            <img src="img/barista.jpg" alt="barista" class="img-fluid">
         </div>
         <p>当店のコーヒー豆が厳選して世界中から買い付けています。そして、そのコーヒー豆の美味しさを最大限に引き出すために自社のロースターで焙煎しています。</p>
       </section>
@@ -118,7 +118,7 @@
       <section class="info hidden">
         <div class="image-container">
             <h2>Our Food</h2>
-            <img src="../img/food3.jpg" alt="food3" class="img-fluid">
+            <img src="img/food3.jpg" alt="food3" class="img-fluid">
         </div>
         <p>当店は何よりまず衛生管理に気をつけています。「安全・安心」をお届けするために日々継続的な努力を惜しみません。</p>
       </section>
@@ -133,7 +133,7 @@
             <p>Saturday, Sunday & Public Holidays: 9am - 9pm</p>
         </div>
         <div class="address-image">
-            <img src="../img/barista.jpg" alt="Coffee Image">
+            <img src="img/barista.jpg" alt="Coffee Image">
         </div>
     </section>
     
@@ -141,19 +141,19 @@
         <h2>店舗一覧</h2>
         <div class="shop">
             <div class="shop-item">
-                <img src="../img/restaurant2.jpg" alt="Shop 1">
+                <img src="img/restaurant2.jpg" alt="Shop 1">
                 <p><i class="fas fa-map-marker-alt"></i> 東京都渋谷区 xxxxx xxxxx</p>
             </div>
             <div class="shop-item">
-                <img src="../img/restaurant3.jpg" alt="Shop 2">
+                <img src="img/restaurant3.jpg" alt="Shop 2">
                 <p><i class="fas fa-map-marker-alt"></i> 千葉県松戸市 xxxxx xxxxx</p>
             </div>
             <div class="shop-item">
-                <img src="../img/restaurant4.jpg" alt="Shop 3">
+                <img src="img/restaurant4.jpg" alt="Shop 3">
                 <p><i class="fas fa-map-marker-alt"></i> 神奈川県横浜市 xxxxx xxxxx</p>
             </div>
             <div class="shop-item">
-                <img src="../img/restaurant5.jpg" alt="Shop 4">
+                <img src="img/restaurant5.jpg" alt="Shop 4">
                 <p><i class="fas fa-map-marker-alt"></i> 埼玉県川越市 xxxxx xxxxx</p>
             </div>
         </div>
@@ -230,6 +230,37 @@
   menuToggle.addEventListener("click", function () {
     menu.classList.toggle("active"); 
   });
+});
+
+   </script>
+
+   <script>
+   document.addEventListener("DOMContentLoaded", function () {
+    const accordionTitles = document.querySelectorAll(".accordion-title");
+
+    accordionTitles.forEach(title => {
+        title.addEventListener("click", function () {
+            const content = this.nextElementSibling;
+
+            if (content.classList.contains("active")) {
+                
+                content.style.transition = "none"; 
+                content.style.maxHeight = content.scrollHeight + "px"; 
+                content.offsetHeight; 
+                content.style.transition = "max-height 0.5s ease-in-out"; 
+                content.style.maxHeight = "0px"; 
+                content.classList.remove("active");
+            } else {
+                
+                content.style.transition = "none"; 
+                content.style.maxHeight = "0px"; 
+                content.offsetHeight; 
+                content.style.transition = "max-height 0.5s ease-in-out"; 
+                content.style.maxHeight = content.scrollHeight + "px"; 
+                content.classList.add("active");
+            }
+        });
+    });
 });
 
    </script>

@@ -223,6 +223,14 @@ button{
     display: none;
     padding: 15px;
     background-color: #ffefd5;
+    max-height: 0; 
+    overflow: hidden; 
+    transition: max-height 0.5s ease-in-out; 
+}
+
+.accordion .accordion-content.active {
+    max-height: 500px; 
+    padding: 15px; 
 }
 
 .accordion-content p{
@@ -417,19 +425,21 @@ footer {
       flex-direction: column;
     }
   
-    .menu {
-      display: none; 
+    .menu { 
       flex-direction: column;
       background-color: #f8f8f8;
       position: absolute; 
-      top: 60px;
+      top: 120px;
       left: 0;
       width: 100%;
-      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); 
       padding: 10px 0; 
-      transform: translateY(100%); 
-      transition: transform 0.3s ease-in-out; 
+      transform: translateY(-100%); 
+      transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out, visibility 0.4s; 
       z-index: 100;
+      opacity: 0;
+      visibility: hidden;
+      background-color: lightgray;
+      top: 60px;
     }
   
     .menu.active {
@@ -437,6 +447,8 @@ footer {
       transform: translateY(0); 
       flex-direction: column;
       align-items: center;
+      opacity: 1;
+      visibility: visible;
     }
   
     .menu-toggle {
@@ -471,6 +483,8 @@ footer {
         align-items: center;
         width: 100%;
         padding: 10px 0;
+        justify-content: center !important;
+
     }
 
     .menu .search-form input {
