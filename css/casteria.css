@@ -1,0 +1,530 @@
+@charset "UTF-8"; 
+
+
+h1, h2, h3, h4, h5, h6, p, address,
+ul, ol, li, dl, dt, dd, img, form, table, tr, th, td {
+    margin: 0; 
+    padding: 0; 
+    border: none; 
+    font-style: normal;
+    font-weight: normal; 
+    font-size: 100%; 
+    text-align: left; 
+    list-style-type: none; 
+    border-collapse: collapse; 
+}
+
+body{
+    margin: 0; 
+    padding: 0; 
+    border: none; 
+    font-style: normal; 
+    font-weight: normal; 
+    font-size: 100%; 
+    text-align: left; 
+    list-style-type: none; 
+    border-collapse: collapse;
+    overflow-x: hidden;
+    font-family: 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif,Arial; 
+    margin: 0;
+    line-height: 1.6;
+    background-color: #ffefd5; 
+}
+
+
+textarea { 
+    font-size: 100%;
+    vertical-align: middle; 
+}
+
+
+img { 
+    border-style: none; 
+    display: block; 
+}
+
+
+hr { 
+    display: none; 
+}
+
+
+em {
+    font-style: normal; 
+}
+
+
+input {
+    line-height: auto; 
+    vertical-align: middle; 
+}
+
+
+strong.more {
+    color: #c30; 
+}
+
+
+a {
+    text-decoration: none; 
+}
+
+
+
+header {
+    background-color: lightgray; 
+    padding: 10px; 
+}
+
+
+header .container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    max-width: 100%; 
+    margin: 0 auto; 
+}
+
+.nav-search-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; 
+    gap: 20px; 
+}
+
+
+header h1 {
+    margin: 0; 
+    font-size: 25px;
+    flex-grow: 1;
+    margin-right: auto;
+    align-items: center;
+}
+
+header nav{
+    justify-content: center;
+    flex-grow: 2;
+    display: flex;
+    align-items: center;
+}
+
+header nav ul {
+    margin: 0; 
+    padding: 0; 
+    margin-left: 10px;
+    display: flex;
+    gap: 15px;
+    white-space: nowrap;
+}
+
+.nav-item{
+    flex-shrink: 0;
+}
+
+header nav .nav-item {
+    margin: 0 10px; 
+}
+
+header nav .nav-link {
+    text-decoration: none; 
+    color: #333; 
+    transition: color 0.3s ease; 
+}
+
+header nav .nav-link:hover {
+    color: #007bff; 
+}
+
+
+header form {
+    display: flex; 
+    align-items: right; 
+    margin-left: auto;
+    flex-grow: 1;
+}
+
+header form .form-control {
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    padding: 5px 10px; 
+    width: 200px; 
+    height: 40px;
+    margin-right: 0%; 
+}
+
+header form .btn {
+    padding: 5px 15px; 
+    border-radius: 5px; 
+}
+
+button{
+    border: none;
+    height: 40px;
+}
+  
+
+.hero-slider {
+    height: 400px; 
+    position: relative; 
+    overflow: hidden; 
+}
+
+.hero-slider .swiper-pagination {
+    position: absolute; 
+    bottom: 20px; 
+    left: 50% !important;
+    transform: translateX(-50%); 
+    z-index: 10; 
+    pointer-events: auto;
+    text-align: center;
+}
+
+.hero-slider .swiper-slide img {
+    width: 100%; 
+    height: 400px; 
+    object-fit: cover; 
+}
+
+.swiper-container{
+    position: relative;
+}
+
+.swiper-scrollbar {
+    position: relative !important;
+    bottom: auto !important; 
+    margin-top: 10px !important;
+    height: 5px !important;
+    background: rgba(0, 0, 0, 0.1) !important;
+  }
+  
+
+.hero-title {
+    text-align: center;
+    font-size: 1.8rem;
+    margin: 20px 0;
+}
+
+.accordion .accordion-title {
+    background-color: #ffc7af;
+    padding: 10px 15px;
+    font-weight: bold;
+    font-size: 25px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    transition: background-color 0.3s;
+}
+
+.accordion .accordion-title:hover {
+    background-color: #ffb59c;
+}
+
+.accordion .accordion-content {
+    display: none;
+    padding: 15px;
+    background-color: #ffefd5;
+}
+
+.accordion-content p{
+    margin-bottom: 10px;
+}
+
+
+.hidden {
+    opacity: 0;
+    transform: translateY(20px); 
+    transition: all 0.6s ease; 
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0); 
+}
+
+
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    margin: 120px 0;
+    padding: 20px 0;
+}
+
+.image-container {
+    position: relative;
+    width: 50%;
+    margin-bottom: 20px ;
+}
+
+.image-container h2 {
+    position: absolute;
+    font-size: 24px;
+    top: -60px;
+    left: 15px;
+    font-weight: bold;
+    color: black;
+    white-space: nowrap;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+}
+
+.info p {
+    width: 45%;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.address {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start;
+    max-width: 800px;
+    height: 300px;
+    padding: 20px;
+    background-color: #000;
+    color: #fff;
+    margin: 0 auto;
+}
+
+.address-container {
+    min-width: 50%;
+    flex: 1;
+    display: block;
+    align-self: flex-start;
+    padding-top: 10px;
+
+}
+
+.address-content {
+    width: 50%; 
+    padding-right: 5px; 
+}
+
+.address-container h2 {
+    font-size: 20px; 
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.address-container h3 {
+    font-size: 20px; 
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.address-container p {
+    font-size: 10px;
+    line-height: 1.5;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.address-image {
+    width: 90%; 
+    display: flex;
+    justify-content: flex-end; 
+}
+
+.address-image img {
+    max-width: 100%; 
+    height: auto;
+    object-fit: cover;
+}
+
+.shop-list {
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.shop-list h2 {
+    font-size: 30px;
+    margin: 30px auto;
+    text-align: center
+    ;
+}
+
+.shop {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: nowrap;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.shop-item {
+    text-align: center;
+    width: calc(25% - 20px);
+}
+
+.shop-item img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.shop-item p {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+footer {
+    background-color: lightgray; 
+    color: #fff; 
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-links {
+    text-align: center; 
+    padding: 10px 0; 
+    font-size: 14px; 
+    color: #333; 
+}
+
+.footer-links a {
+    color: #333; 
+    text-decoration: none; 
+    margin: 0 10px; 
+}
+
+.footer-links a:hover {
+    text-decoration: underline; 
+}
+
+@media (max-width: 768px) {
+    .shop-list{
+        display: none;
+    }
+
+    header .container {
+      flex-direction: column;
+    }
+  
+    .menu {
+      display: none; 
+      flex-direction: column;
+      background-color: #f8f8f8;
+      position: absolute; 
+      top: 60px;
+      left: 0;
+      width: 100%;
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); 
+      padding: 10px 0; 
+      transform: translateY(100%); 
+      transition: transform 0.3s ease-in-out; 
+      z-index: 100;
+    }
+  
+    .menu.active {
+      display: flex;
+      transform: translateY(0); 
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .menu-toggle {
+      display: block; 
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      font-size: 24px;
+      cursor: pointer;
+      z-index: 1000; 
+    }
+
+    .menu ul {
+        width: 100%;
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu ul li {
+        width: 100%;
+        text-align: center; 
+        list-style: none; 
+        padding: 10px 0; 
+    }
+
+    .menu .search-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .menu .search-form input {
+        width: 80%;
+        margin-bottom: 10px;
+    }
+
+    .menu .search-form button {
+        width: auto;
+    }
+    
+    .address {
+        width: 80%; 
+        max-width: 430px; 
+        margin: 0 auto; 
+        padding: 0px; 
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    
+    .address-container {
+        width: 100%;
+        text-align: left; 
+    }
+
+    .address-content {
+        width: 90%; 
+        padding: 10px; 
+    }
+
+    .address-image {
+        width: 100% !important;
+        display: flex;
+        justify-content: center; 
+    }
+
+    .address-image img {
+        width: 100% !important;
+        height: auto;
+    }
+
+    footer {
+        margin-top: 100px; 
+    }
+
+
+    }
+    
+
+
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none;
+    }
+}
