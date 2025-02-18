@@ -1,0 +1,72 @@
+
+window.toggleAccordion = function (id) {
+    const content = document.getElementById(id);
+    if (!content) return;
+    content.style.display = content.style.display === "block" ? "none" : "block";
+};
+
+document.addEventListener("DOMContentLoaded", function () {
+    console.log("Document loaded, initializing scripts...");
+
+    if (typeof Swiper === "undefined") {
+        console.error("Swiper is not loaded properly.");
+    } else {
+        new Swiper('.swiper-container', {
+            loop: true,
+            autoplay: { delay: 3000 },
+            navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+            pagination: { el: '.swiper-pagination', clickable: true },
+            slidesPerView: 2,
+            slidesPerGroup: 1,
+            spaceBetween: 0,
+            scrollbar: { el: '.swiper-scrollbar', draggable: true },
+            breakpoints: { 768: { slidesPerView: 2 }, 0: { slidesPerView: 1 } }
+        });
+    }
+
+    const menuToggle = document.querySelector(".menu-toggle");
+    const menu = document.querySelector(".menu");
+    if (menuToggle && menu) {
+        menuToggle.addEventListener("click", function () {
+            menu.classList.toggle("active");
+        });
+    }
+
+    const targets = document.querySelectorAll(".hidden");
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.classList.add("visible");
+                }, index * 300);
+                observer.unobserve(entry.target);
+            }
+        });
+    });
+    targets.forEach(target => observer.observe(target));
+
+    const accordionTitles = document.querySelectorAll(".accordion-title");
+    accordionTitles.forEach(title => {
+        title.addEventListener("click", function () {
+            const content = this.nextElementSibling;
+            if (!content) return;
+
+            if (content.classList.contains("active")) {
+                content.style.transition = "none";
+                content.style.maxHeight = content.scrollHeight + "px";
+                content.offsetHeight;
+                content.style.transition = "max-height 0.5s ease-in-out";
+                content.style.maxHeight = "0px";
+                content.classList.remove("active");
+            } else {
+                content.style.transition = "none";
+                content.style.maxHeight = "0px";
+                content.offsetHeight;
+                content.style.transition = "max-height 0.5s ease-in-out";
+                content.style.maxHeight = content.scrollHeight + "px";
+                content.classList.add("active");
+            }
+        });
+    });
+});
+
