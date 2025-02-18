@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casteria</title>
+    <link rel="stylesheet" href="casteria.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <header class="p-3 bg-light">
+        <div class="container d-flex align-items-center justify-content-between">
+            <h1 class="m-0">Casteria</h1>
+            <button class="menu-toggle">☰</button>
+            <div class="nav-search-wrapper d-flex"> 
+              <nav class="menu d-none d-md-flex">
+                <ul class="nav d-flex">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Food</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Drink</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">お問合せ</a></li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+               </nav>
+            </div>
+        </div>
+    </header>
+    <section class="hero-slider">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="img/restaurant.jpg" alt="restaurant">
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/interior.jpg" alt="interior">
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/samon.jpg" alt="samon">
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/pasta.jpg" alt="pasta">
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </section>
+    <div class="swiper-scrollbar"></div>
+
+    <div class="container">
+        <section class="hero">
+            <h2 class="hero-title">新型コロナウイルスに対する取り組みの最新情報をご案内</h2>
+        </section>
+        <section class="accordion">
+            <div class="accordion-item">
+                <div class="accordion-title" onclick="toggleAccordion('content1')">■衛生面に関して</div>
+                <div class="accordion-content" id="content1">
+                    <p>・マスクを着用しての接客</p>
+                    <p>・出勤前の検温の徹底</p>
+                    <p>・レジカウンターやドリンクの受け渡し口等への飛沫防止ガードの設置</p>
+                    <p>・より精度の高い手洗いの励行</p>
+                    <p>・テーブルにお客様用の消毒用アルコールの設置</p>
+                    <p>・従業員間の距離の確保のため、休憩や研修時の客席利用</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-title" onclick="toggleAccordion('content2')">■お客様へのご協力のお願い</div>
+                <div class="accordion-content" id="content2">
+                    <p>・店内では、飲食時以外のマスク着用をお願いいたします</p>
+                    <p>・入店時の手指の消毒にご協力ください</p>
+                    <p>・レジに並ぶ際、目安を示すフロアステッカーに沿った列間隔の確保にご協力ください</p>
+                    <p>・多数でお越しの際は、お1人がまとめてご注文願います(混雑時には入場制限をする場合がございます)</p>
+                    <p>・発熱や体調不良の際はご入店をお控えください</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-title" onclick="toggleAccordion('content3')">■サービスに関して</div>
+                <div class="accordion-content" id="content3">
+                    <p>・直接お渡しする際の提供、金銭受領時にグローブの着用</p>
+                    <p>・ドリンクやフードのサンプリング中止</p>
+                    <p>・地域活動・イベントの中止</p>
+                    <p>・混雑時間帯の客席の譲り合いへのご協力お願いの実施</p>
+                    <p>・店内設置をしているミルク、はちみつ、パウダー類の一時引き下げ</p>
+                    <p>・混雑状況に応じたドライブスルーサービスの一時休止や店内客席利用の制限</p>
+                </div>
+            </div>
+        </section>
+
+       <section class="info hidden">
+        <div class="image-container">
+            <h2>Signature Food</h2>
+            <img src="img/samon.jpg" alt="Salmon Dish" class="img-fluid">
+        </div>
+        <p>サーモンは刺身やカルパッチョで食べるのが美味しいですが、リッチな気分になれるサーモンステーキがおすすめです。サーモンの美味しさを引き立てる2種類のソースも魅力です！</p>
+      </section>
+    
+      <section class="info hidden">
+        <div class="image-container">
+            <h2>Our Coffee</h2>
+            <img src="img/barista.jpg" alt="barista" class="img-fluid">
+        </div>
+        <p>当店のコーヒー豆が厳選して世界中から買い付けています。そして、そのコーヒー豆の美味しさを最大限に引き出すために自社のロースターで焙煎しています。</p>
+      </section>
+
+      <section class="info hidden">
+        <div class="image-container">
+            <h2>Our Food</h2>
+            <img src="img/food3.jpg" alt="food3" class="img-fluid">
+        </div>
+        <p>当店は何よりまず衛生管理に気をつけています。「安全・安心」をお届けするために日々継続的な努力を惜しみません。</p>
+      </section>
+    </div>
+
+    <section class="address hidden">
+        <div class="address-container">
+            <h2>   Address</h2>
+            <p>681 xxx Drive, xxxxx xxxx #01-06 000000</p>
+            <p>Opening Hours</p>
+            <h3>   Monday - Friday: 10am - 9pm</h3>
+            <p>Saturday, Sunday & Public Holidays: 9am - 9pm</p>
+        </div>
+        <div class="address-image">
+            <img src="img/barista.jpg" alt="Coffee Image">
+        </div>
+    </section>
+    
+    <section class="shop-list hidden">
+        <h2>店舗一覧</h2>
+        <div class="shop">
+            <div class="shop-item">
+                <img src="img/restaurant2.jpg" alt="Shop 1">
+                <p><i class="fas fa-map-marker-alt"></i> 東京都渋谷区 xxxxx xxxxx</p>
+            </div>
+            <div class="shop-item">
+                <img src="img/restaurant3.jpg" alt="Shop 2">
+                <p><i class="fas fa-map-marker-alt"></i> 千葉県松戸市 xxxxx xxxxx</p>
+            </div>
+            <div class="shop-item">
+                <img src="img/restaurant4.jpg" alt="Shop 3">
+                <p><i class="fas fa-map-marker-alt"></i> 神奈川県横浜市 xxxxx xxxxx</p>
+            </div>
+            <div class="shop-item">
+                <img src="img/restaurant5.jpg" alt="Shop 4">
+                <p><i class="fas fa-map-marker-alt"></i> 埼玉県川越市 xxxxx xxxxx</p>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <footer>
+        <div class="footer-links">
+            <a href="privacy-policy.html">プライバシーポリシー</a>
+            <a href="terms.html">利用規約</a>
+            <a href="contact.html">運営会社</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="script.js" defer></script>
+</body>
+</html>
+
+
+
+
+
