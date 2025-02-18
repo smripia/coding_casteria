@@ -5,14 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Casteria</title>
     <link rel="stylesheet" href="casteria.css">
-    <script>
-        function toggleAccordion(id) {
-            const content = document.getElementById(id);
-            content.style.display = content.style.display === "block" ? "none" : "block";
-        }
-    </script>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
@@ -159,7 +152,7 @@
         </div>
     </section>
 
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    
 
     <footer>
         <div class="footer-links">
@@ -169,101 +162,8 @@
         </div>
     </footer>
 
-  <script>
-        const swiper = new Swiper('.swiper-container', {
-            loop: true,
-            autoplay: {
-                delay: 3000,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            slidesPerView: 2,
-            slidesPerGroup: 1,
-            spaceBetween: 0,
-
-            scrollbar: {
-            el: '.swiper-scrollbar', 
-            draggable: true,         
-            },
-
-            breakpoints: {
-             768: { 
-             slidesPerView: 2,
-             },
-             0: { 
-             slidesPerView: 1,
-             }
-            }
-        });
-  </script>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-    const targets = document.querySelectorAll(".hidden");
-
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach((entry, index) => {
-            if (entry.isIntersecting) {
-                setTimeout(() => {
-                    entry.target.classList.add("visible");
-                }, index * 300); 
-                observer.unobserve(entry.target); 
-            }
-        });
-    });
-
-    targets.forEach((target) => observer.observe(target));
-});
-
-   </script>
-
-   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-  const menuToggle = document.querySelector(".menu-toggle");
-  const menu = document.querySelector(".menu");
-
-  menuToggle.addEventListener("click", function () {
-    menu.classList.toggle("active"); 
-  });
-});
-
-   </script>
-
-   <script>
-   document.addEventListener("DOMContentLoaded", function () {
-    const accordionTitles = document.querySelectorAll(".accordion-title");
-
-    accordionTitles.forEach(title => {
-        title.addEventListener("click", function () {
-            const content = this.nextElementSibling;
-
-            if (content.classList.contains("active")) {
-                
-                content.style.transition = "none"; 
-                content.style.maxHeight = content.scrollHeight + "px"; 
-                content.offsetHeight; 
-                content.style.transition = "max-height 0.5s ease-in-out"; 
-                content.style.maxHeight = "0px"; 
-                content.classList.remove("active");
-            } else {
-                
-                content.style.transition = "none"; 
-                content.style.maxHeight = "0px"; 
-                content.offsetHeight; 
-                content.style.transition = "max-height 0.5s ease-in-out"; 
-                content.style.maxHeight = content.scrollHeight + "px"; 
-                content.classList.add("active");
-            }
-        });
-    });
-});
-
-   </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
 
